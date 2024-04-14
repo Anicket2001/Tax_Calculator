@@ -1,0 +1,88 @@
+body{
+  background-color: antiquewhite;
+}
+*{
+  margin: 0;
+  padding: 0;
+  color: black;
+  /* background-color: antiquewhite; */
+}
+.error-tooltip {
+  display: none;
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.error-tooltip.active {
+  display: block;
+}
+.bi .active{
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+.question-message {
+  position: relative;
+  cursor: pointer;
+  width: 20%;
+}
+
+.question-message::before {
+  content: attr(data-message);
+  position: absolute;
+  /* top: -3.5em; Adjust as needed */
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+.question-message:hover::before {
+  display: block;
+  width: 10rem;
+}
+.error-icon{
+  cursor: pointer;
+}
+#age-message:hover::before{
+  top: -3.5em;
+}
+#annual-income-message:hover::before{
+  top: -5em;
+}
+#extra-income-message:hover::before{
+  top: -6.5em;
+}
+#deduction-message:hover::before{
+  top: -5em;
+}
+label{
+  font-size: 1em;
+}
+.icon{
+  color: grey;
+}
+/* Modal */
+.modal-dialog{
+  height: 100%;
+}
+.modal-content{
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+.modal-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#result{
+  font-size:1.5rem;
+}
